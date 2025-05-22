@@ -1,4 +1,10 @@
-# ems-algacomments-meta
+# Getting Started
+
+To download the project and its submodules, run the command below:
+
+git clone --recurse-submodules https://github.com/maikelsouza/ems-algacomments-meta.git
+
+## ems-algacomments-meta
 
 This project is an exercise from the AlgaWorks microservices course.
 
@@ -7,15 +13,17 @@ The system will be responsible for receiving user comments, validating them agai
 
 ## Project Diagram
 
+The diagram below shows how the Comment and Moderation microservices communicate synchronously via HTTP.
+
 ![img.png](img.png)
 
 ## Microservice: Comment
 
 This microservice is responsible for:
 
-- Create a new comment and submit it for moderation
-- View the details of an approved comment
-- List approved comments with pagination
+- Create a new comment and submit it for moderation;
+- View the details of an approved comment;
+- List approved comments with pagination;
 
 ### Endpoints
 
@@ -30,10 +38,18 @@ There are three endpoints:
 - **GET** `/api/comments`  
   Retrieves all comments with pagination.
 
+### Repository
+
+- [**Comment**](https://github.com/maikelsouza/ems-algacomments-comment)
+
 ## Microservice: Moderation
 
 This microservice is responsible for:
 
-- Expose a REST API for creating and querying comments
-- Submit new comments for moderation via synchronous POST using RestClient
-- Store only approved comments
+- Expose a REST API to validate comments;
+- Analyze comments for forbidden words;
+- Return moderation results to the Comment;
+- 
+### Repository
+
+- [**Moderation**](https://github.com/maikelsouza/ems-algacomments-moderation)
