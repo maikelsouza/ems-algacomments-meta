@@ -49,7 +49,7 @@ This microservice is responsible for:
 - Expose a REST API to validate comments;
 - Analyze comments for forbidden words;
 - Return moderation results to the Comment;
-- 
+
 ### Repository
 
 - [**Moderation**](https://github.com/maikelsouza/ems-algacomments-moderation)
